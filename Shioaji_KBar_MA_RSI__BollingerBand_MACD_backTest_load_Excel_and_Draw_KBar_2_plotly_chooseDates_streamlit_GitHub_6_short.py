@@ -31,9 +31,9 @@ stc.html(html_temp)
 # ## 保存为Pickle文件:
 # df_original.to_pickle('kbars_2330_2022-01-01-2022-11-18.pkl')
 
-## 读取Pickle文件
-df_original = pd.read_pickle('kbars_2317_2020-01-01-2024-06-20.xlsx')
-
+import pandas as pd
+# 使用pd.read_excel而不是pd.read_pickle
+df_original = pd.read_excel('kbars_2317_2020-01-01-2024-06-20.xlsx')
 
 #df.columns  ## Index(['Unnamed: 0', 'time', 'open', 'low', 'high', 'close', 'volume','amount'], dtype='object')
 df_original = df_original.drop('Unnamed: 0',axis=1)
